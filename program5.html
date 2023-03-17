@@ -84,101 +84,102 @@
                                  printf("|%d|->",temp->data);<br>
                                  temp=temp->link;<br>
                                  count++;<br>
-                            }
-                        printf("\n\nNUMBER OF NODE IN LIST::%d\n\n",count);
-                          }/end of else/
-                        }/end of function display/
-                         NODE stack_integers(NODE start)
-                        {
-                            int choice;
-                        printf("\nOPERATIONS ON STACK\n");
-                            for(;;)
-                            {
-                        printf("\nLIST AS STACK\n");
-                                printf("\n1:PUSH\n2:POP\n3:DISPLAY\n4:EXIT\n");
-                                printf("\nEnter choice::\n");
-                        scanf("%d",&choice);
-                                switch(choice)
-                                {
-                                    case 1:start=insert_front(start);
-                                    break;
-                                    case 2:start=delete_front(start);
-                                    break;
-                                    case 3:display(start);
-                                    break;
-                        default:printf("Not a valid choice\n"); return;
-                                }/end of switch/
-                            }/end of for/
-                        }
-                        int linearsearch(NODE start)
-                        {
-                        int key,flag=0,n,i;
-                           NODE p;
-                           printf("List with n nodes creation\n");
-                           scanf("%d",&n);
-                           for(i=0;i<n;i++)
-                             start=insert_front(start);
-                             display(start);
-                           printf("Enter the key you want to search\n\n");
-                        scanf("%d",&key);
-                           p=start;
-                           while(p!=NULL)
-                           {
-                              if(p->data==key)
-                                {
-                                   printf("Key found\n\n");
-                                    flag=1;
-                                   return 0;
-                                }
-                              else
-                                 p=p->link;
-                           }
-                              if(flag==0)
-                                    printf("key not found\n");
-                              return 0;
-                           }
-                         void concatination()
-                         {
-                        int n,m,i;
-                           NODE start1=NULL, start2=NULL,temp;
-                           printf("List1 with n nodes creation\n");
-                           scanf("%d",&n);
-                           for(i=0;i<n;i++)
-                             start1=insert_front(start1);
-                             display(start1);
-                           printf("List2 with m nodes creation\n");
-                        scanf("%d",&m);
-                           for(i=0;i<m;i++)
-                                start2=insert_front(start2);
-                                display(start2);
-                           temp=start1;
-                           while(temp->link!=NULL)
-                              temp=temp->link;
-                           temp->link=start2;
-                           display(start1);
-                           }
-                        void main()
-                        {
-                        int ch,n,i;
-                            for(;;)
-                            {
-                        printf("\nSINGLY LINKED LIST OPERATIONS\n");
-                                printf("\nMENU\n");
-                                printf("\n\n1:stack of integers\n2:\Linear search on SLL\n3:Concatination of two SLL\n\n");
-                                printf("Enter choice::");
-                                scanf("%d",&ch);
-                                switch(ch)
-                                {
-                                    case 1:stack_integers(start);
-                                           break;
-                                    case 2:start= linearsearch(start);
-                                           break;
-                                    case 3:concatination();
-                                           break;
-                        default:exit(0);
-                                }/end of switch/
-                            }/end of for/
-                        }/end of function main/
+                            }<br>
+                        printf("\n\nNUMBER OF NODE IN LIST::%d\n\n",count);<br>
+                          }<br>
+                        }<br>
+                         NODE stack_integers(NODE start)<br><br><br>
+                        {<br><br>
+                            int choice;<br>
+                        printf("\nOPERATIONS ON STACK\n");<br><br>
+                            for(;;)<br>
+                            {<br>
+                        printf("\nLIST AS STACK\n");<br>
+                                printf("\n1:PUSH\n2:POP\n3:DISPLAY\n4:EXIT\n");<br>
+                                printf("\nEnter choice::\n");<br>
+                        scanf("%d",&choice);<br>
+                                switch(choice)<br>
+                                {<br>
+                                    case 1:start=insert_front(start);<br>
+                                    break;<br>
+                                    case 2:start=delete_front(start);<br>
+                                    break;<br>
+                                    case 3:display(start);<br>
+                                    break;<br>
+                        default:printf("Not a valid choice\n");<br>
+                    return;<br>
+                                }<br>
+                            }<br>
+                        }<br>
+                        int linearsearch(NODE start)<br>
+                        {<br>
+                        int key,flag=0,n,i;<br>
+                           NODE p;<br>
+                           printf("List with n nodes creation\n");<br>
+                           scanf("%d",&n);<br>
+                           for(i=0;i<n;i++)<br>
+                             start=insert_front(start);<br>
+                             display(start);<br>
+                           printf("Enter the key you want to search\n\n");<br>
+                        scanf("%d",&key);<br>
+                           p=start;<br>
+                           while(p!=NULL)<br>
+                           {<br>
+                              if(p->data==key)<br>
+                                {<br>
+                                   printf("Key found\n\n");<br>
+                                    flag=1;<br>
+                                   return 0;<br>
+                                }<br>
+                              else<br>
+                                 p=p->link;<br>
+                           }<br>
+                              if(flag==0)<br>
+                                    printf("key not found\n");<br>
+                              return 0;<br>
+                           }<br>
+                         void concatination()<br>
+                         {<br>
+                        int n,m,i;<br>
+                           NODE start1=NULL, start2=NULL,temp;<br>
+                           printf("List1 with n nodes creation\n");<br>
+                           scanf("%d",&n);<br>
+                           for(i=0;i<n;i++)<br>
+                             start1=insert_front(start1);<br>
+                             display(start1);<br>
+                           printf("List2 with m nodes creation\n");<br>
+                        scanf("%d",&m);<br>
+                           for(i=0;i<m;i++)<br>
+                                start2=insert_front(start2);<br>
+                                display(start2);<br>
+                           temp=start1;<br>
+                           while(temp->link!=NULL)<br>
+                              temp=temp->link;<br>
+                           temp->link=start2;<br>
+                           display(start1);<br>
+                           }<br>
+                        void main()<br>
+                        {<br>
+                        int ch,n,i;<br>
+                            for(;;)<br>
+                            {<br>
+                        printf("\nSINGLY LINKED LIST OPERATIONS\n");<br>
+                                printf("\nMENU\n");<br>
+                                printf("\n\n1:stack of integers\n2:\Linear search on SLL\n3:Concatination of two SLL\n\n");<br>
+                                printf("Enter choice::");<br>
+                                scanf("%d",&ch);<br>
+                                switch(ch)<br>
+                                {<br><br>
+                                    case 1:stack_integers(start);<br>
+                                           break;<br>
+                                    case 2:start= linearsearch(start);<br>
+                                           break;<br>
+                                    case 3:concatination();<br>
+                                           break;<br>
+                        default:exit(0);v
+                                }<br>
+                            }<br>
+                        }<br>
                 </p>
                 
 
